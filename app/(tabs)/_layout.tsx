@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { useAuth } from '@/contexts/AuthContext';
-import { Chrome as Home, TriangleAlert as AlertTriangle, Users, Settings, Shield } from 'lucide-react-native';
+import { Chrome as Home, TriangleAlert as AlertTriangle, Users, Settings, Shield, FileText } from 'lucide-react-native';
 
 export default function TabLayout() {
   const { user } = useAuth();
@@ -37,11 +37,11 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="reports"
+          name="all-reports"
           options={{
-            title: 'All Reports',
+            title: 'View Reports',
             tabBarIcon: ({ size, color }) => (
-              <AlertTriangle size={size} color={color} />
+              <FileText size={size} color={color} />
             ),
           }}
         />

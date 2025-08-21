@@ -7,7 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { TriangleAlert as AlertTriangle, Clock, CircleCheck as CheckCircle, Circle as XCircle, Filter } from 'lucide-react-native';
+import { FileText, Clock, CircleCheck as CheckCircle, Circle as XCircle, Filter } from 'lucide-react-native';
 import { useAuth } from '@/contexts/AuthContext';
 
 const MOCK_REPORTS = [
@@ -126,8 +126,8 @@ export default function ReportsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <AlertTriangle size={24} color="#DC2626" />
-        <Text style={styles.headerTitle}>All Reports</Text>
+        <FileText size={24} color="#DC2626" />
+        <Text style={styles.headerTitle}>View All Reports</Text>
         <TouchableOpacity style={styles.filterButton}>
           <Filter size={20} color="#6B7280" />
         </TouchableOpacity>
