@@ -115,20 +115,6 @@ export default function UsersScreen() {
     }
   };
 
-  if (currentUser?.role !== 'admin') {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.accessDenied}>
-          <Shield size={48} color="#DC2626" />
-          <Text style={styles.accessDeniedText}>Access Denied</Text>
-          <Text style={styles.accessDeniedSubtext}>
-            Only administrators can access this page
-          </Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -428,24 +414,6 @@ const styles = StyleSheet.create({
   actionButton: {
     padding: 8,
     marginLeft: 8,
-  },
-  accessDenied: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 40,
-  },
-  accessDeniedText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#DC2626',
-    marginTop: 16,
-  },
-  accessDeniedSubtext: {
-    fontSize: 16,
-    color: '#6B7280',
-    textAlign: 'center',
-    marginTop: 8,
   },
   modalContainer: {
     flex: 1,

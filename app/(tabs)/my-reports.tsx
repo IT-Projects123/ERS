@@ -134,17 +134,17 @@ export default function MyReportsScreen() {
   if (!user) {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.accessDenied}>
-          <AlertTriangle size={48} color="#DC2626" />
-          <Text style={styles.accessDeniedText}>Login Required</Text>
-          <Text style={styles.accessDeniedSubtext}>
+        <View style={styles.emptyState}>
+          <AlertTriangle size={48} color="#6B7280" />
+          <Text style={styles.emptyTitle}>Login Required</Text>
+          <Text style={styles.emptyText}>
             Please log in to view your reports
           </Text>
           <TouchableOpacity 
-            style={styles.loginButton}
+            style={styles.reportButton}
             onPress={() => router.push('/(auth)/login')}
           >
-            <Text style={styles.loginButtonText}>Go to Login</Text>
+            <Text style={styles.reportButtonText}>Go to Login</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -446,35 +446,5 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#374151',
     fontWeight: '500',
-  },
-  accessDenied: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 40,
-  },
-  accessDeniedText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#DC2626',
-    marginTop: 16,
-  },
-  accessDeniedSubtext: {
-    fontSize: 16,
-    color: '#6B7280',
-    textAlign: 'center',
-    marginTop: 8,
-  },
-  loginButton: {
-    backgroundColor: '#DC2626',
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 8,
-    marginTop: 20,
-  },
-  loginButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
   },
 });

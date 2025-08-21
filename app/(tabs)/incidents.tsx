@@ -161,20 +161,6 @@ export default function IncidentsScreen() {
     });
   };
 
-  if (user?.role !== 'responder') {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.accessDenied}>
-          <AlertTriangle size={48} color="#2563EB" />
-          <Text style={styles.accessDeniedText}>Access Denied</Text>
-          <Text style={styles.accessDeniedSubtext}>
-            Only responders can access this page
-          </Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -463,23 +449,5 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '500',
     marginLeft: 4,
-  },
-  accessDenied: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 40,
-  },
-  accessDeniedText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#2563EB',
-    marginTop: 16,
-  },
-  accessDeniedSubtext: {
-    fontSize: 16,
-    color: '#6B7280',
-    textAlign: 'center',
-    marginTop: 8,
   },
 });
