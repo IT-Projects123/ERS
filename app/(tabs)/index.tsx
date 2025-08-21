@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { useAuth } from '@/contexts/AuthContext';
-import { TriangleAlert as AlertTriangle, Users, TrendingUp, Clock, Shield, Plus } from 'lucide-react-native';
+import { TriangleAlert as AlertTriangle, Users, TrendingUp, Clock, Shield, Plus, FileText } from 'lucide-react-native';
 import { router } from 'expo-router';
 
 export default function DashboardScreen() {
@@ -52,9 +52,9 @@ export default function DashboardScreen() {
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.actionButton}
-          onPress={() => router.push('/(tabs)/reports')}
+          onPress={() => router.push('/(tabs)/all-reports')}
         >
-          <AlertTriangle size={20} color="#DC2626" />
+          <FileText size={20} color="#DC2626" />
           <Text style={styles.actionText}>View All Reports</Text>
         </TouchableOpacity>
       </View>
