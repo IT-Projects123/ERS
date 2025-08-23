@@ -7,7 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { FileText, Clock, CircleCheck as CheckCircle, Circle as XCircle, Filter, AlertTriangle } from 'lucide-react-native';
+import { FileText, Clock, CircleCheck as CheckCircle, Circle as XCircle, Filter, TriangleAlert as AlertTriangle } from 'lucide-react-native';
 import { useAuth } from '@/contexts/AuthContext';
 
 const MOCK_REPORTS = [
